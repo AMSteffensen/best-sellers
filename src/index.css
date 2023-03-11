@@ -1,13 +1,98 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+    text-transform: capitalize;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.autocomplete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .autocomplete-input {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
+  }
+
+.booklist {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.book img {
+    background-color: black;
+    width: 100%;
+    object-fit: cover;
+}
+
+.book {
+    background: #ffff;
+    border-radius: 1rem;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.book p {
+    margin: 1rem 0 0.5rem;
+}
+
+.book h2 {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.book h4 {
+    color: #617d98;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+    .booklist {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+    }
+}
+
+
+.book__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: red;
+    color: white;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
