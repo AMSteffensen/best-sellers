@@ -2,6 +2,24 @@
 
 https://funny-biscochitos-022826.netlify.app/
 
+The project has a CI/CD Pipeline with Netlify, 
+after a commit is pushed to master branch the 
+change will be deployed to production.
+
+# features
+Autocomplete in search for title on book
+
+# Sources
+
+Uses openlibary api to grab images for the book covers
+https://openlibrary.org/
+
+
+Uses Ny Times api for book data and the top 15 best sellers
+https://api.nytimes.com/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
