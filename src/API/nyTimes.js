@@ -8,9 +8,10 @@ export const fetchBooks = () => {
     .then((data) => {
       const bookData = data.results.map((result) => ({
         label: result.book_details[0].title,
+        isbn: result.isbns[0].isbn10,
+        url: result.amazon_product_url,
         author: result.book_details[0].author,
         title: result.book_details[0].title,
-        img: result.book_details[0].book_image,
         id: result.rank,
       }));
       return bookData;

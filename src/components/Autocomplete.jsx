@@ -6,8 +6,6 @@ const Autocomplete = ({ books }) => {
   const [inputValue, setInputValue] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
 
-  console.log(books);
-
   const getBook = () => {
     console.log("je");
   };
@@ -34,13 +32,13 @@ const Autocomplete = ({ books }) => {
       {inputValue === "" ? (
         <ul className="booklist">
           {books.map((book, index) => (
-            <Book {...book} />
+            <Book key={index} {...book} />
           ))}
         </ul>
       ) : (
         <ul className="booklist">
           {filteredBooks.map((book, index) => (
-            <Book {...book} getBook={getBook} />
+            <Book key={index} {...book} getBook={getBook} />
           ))}
         </ul>
       )}

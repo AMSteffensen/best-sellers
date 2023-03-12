@@ -1,14 +1,15 @@
 const Book = (props) => {
-  const { img, title, author, children, getBook, id } = props;
+  const { title, author, children, id, isbn, url } = props;
+  const imgUrl = `https://covers.openlibrary.org/b/isbn/${isbn}.jpg`;
   return (
     <article className="book">
       <div className="book__number">{id}</div>
-      <img src={img} alt="book" />
+      <img src={imgUrl} alt="book" />
       <h2>{title}</h2>
       <h4>{author}</h4>
-      {/* <button className="book__btn" onClick={() => getBook(id)}>
-        On Click
-      </button> */}
+      <a href={url} target="_blank" rel="noreferrer">
+        View on amazon
+      </a>
       {children}
     </article>
   );

@@ -4,10 +4,10 @@ import Heading from "./components/Heading";
 
 const App = ({ books }) => {
   return (
-    <div>
+    <>
       <Heading />
       <Autocomplete books={books} />
-    </div>
+    </>
   );
 };
 export default App;
