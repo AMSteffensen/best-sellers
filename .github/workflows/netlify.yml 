@@ -16,6 +16,6 @@ jobs:
         uses: nwtgck/actions-netlify@v1.3.0
         with:
           publish-dir: build
-          production-branch: main
+          production-branch: master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
