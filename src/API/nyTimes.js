@@ -3,6 +3,11 @@ const url =
   "https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=";
 
 export const fetchBooks = () => {
+  const cachedData = localStorage.getItem(`autocomplete-${url}`);
+  if (cachedData) {
+    return Promise.resolve(JSON.parse(cachedData));
+  }
+
   return fetch(url + KEY)
     .then((response) => response.json())
     .then((data) => {
@@ -14,6 +19,8 @@ export const fetchBooks = () => {
         title: result.book_details[0].title,
         id: result.rank,
       }));
+
+      localStorage.setItem(`autocomplete-${url}`, JSON.stringify(bookData));
       return bookData;
     });
 };
