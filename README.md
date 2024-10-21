@@ -1,6 +1,5 @@
 # Netflify deployment
 
-https://funny-biscochitos-022826.netlify.app/
 
 The project has a CI/CD Pipeline with Netlify, 
 after a commit is pushed to master branch the 
